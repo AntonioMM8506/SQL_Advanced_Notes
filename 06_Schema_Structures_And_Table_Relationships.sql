@@ -62,8 +62,8 @@ ORDER BY table_name, 3 DESC;
 	-- * Calculated fields/metrics
 COMMENT ON TABLE general_hospital.vitals IS
 'Patient vital sign data taken at the beginning of the encounter';
- 
- 
+
+
 SELECT obj_description('general_hospital.vitals'::regclass);
 
 
