@@ -26,18 +26,18 @@ SELECT * FROM general_hospital.v_monthly_suregery_stats_by_department;
 
 
 SELECT * FROM information_schema.views;
- 
- 
+
+
 SELECT * FROM information_schema.views WHERE table_schema= 'general_hospital';
- 
- 
+
+
 
 -- Basic use of Modifying and Deleting Views, DROP, REPLACE and ALTER VIEW
 -- Views can be modified or deleted much in the same way as normal tables.
 -- We can: replace existing views, drop views and/or alter views.
 DROP VIEW IF EXISTS general_hospital.v_monthly_suregery_stats_by_department;
- 
- 
+
+
 CREATE OR REPLACE VIEW general_hospital.v_monthly_surgery_stats AS
 SELECT 
 	to_char(surgical_admission_date,  'YYYY-MM') AS year_month,
@@ -47,8 +47,8 @@ SELECT
 FROM general_hospital.surgical_encounters
 GROUP BY 1
 ORDER BY 1;
- 
- 
+
+
 SELECT * FROM general_hospital.v_monthly_surgery_stats;
 
 
